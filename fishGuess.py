@@ -3,7 +3,7 @@ import json
 
 url = "https://fishbase.ropensci.org/species"
 
-payload={}
+payload = {}
 headers = {}
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -12,4 +12,11 @@ fish_species = fish_data['data'][0]['Species']
 dangerous = fish_data['data'][0]['Dangerous']
 comments = fish_data['data'][0]['Comments']
 image = fish_data['data'][0]['image']
-print(fish_data['data'][0]['image'])
+#print(fish_data['data'][0]['image'])
+#print(fish_data)
+fish_species_list = []
+
+
+for fish in fish_data:
+    print(fish_data['data'][0]['Species'])
+
